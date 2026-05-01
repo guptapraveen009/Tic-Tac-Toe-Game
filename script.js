@@ -125,10 +125,12 @@ reset.addEventListener('click', () => {
     let clear = document.querySelector(".winner")
     if (clear) {
         clear.remove()
+         message.innerText = `${p1} It's Your Turn`;
     }
 
     let drawclear = document.querySelector(".Draw");
     if(drawclear){
         drawclear.remove()
+         message.innerText = `${p1} It's Your Turn`;
     }
 })
