@@ -134,4 +134,7 @@ padding: 20px;
     font-size: 0.8rem;
     padding: 2rem;
  }
+ .game-btn:disabled:hover{
+    background-color:#E6EFE9;;
+}
 }
