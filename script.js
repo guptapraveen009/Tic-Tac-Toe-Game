@@ -53,10 +53,10 @@ boxes.forEach((box) => {
             box.innerText = "X";
             turnO = true;
             message.innerText = `${p1} It's Your Turn`;
-         }
-          box.disabled = true
+        }
+        box.disabled = true
         winner();
-       
+
     });
 
 });
@@ -116,6 +116,9 @@ reset.addEventListener('click', () => {
             boxes[i].disabled = false
         }
     }
+
+    turnO = true;
+    message.innerText = `${p1} It's Your Turn`;
     let clear = document.querySelector(".winner")
     if (clear) {
         clear.remove()

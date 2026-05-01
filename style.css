@@ -41,12 +41,15 @@ margin: 20px;
     font-size: 3rem;
 }
 
-.game-btn:hover{
+.game-btn:hover,
+.game-btn:focus {
     background-color: #FFF8E8;
 }
 
-.game-btn:disabled:hover{
-    background-color:#E6EFE9;;
+.game-btn:disabled:hover,
+.game-btn:disabled:focus {
+    background-color: #E6EFE9;
+    outline: none;
 }
 #reset{
     padding: 1rem;
@@ -122,7 +125,7 @@ padding: 20px;
     font-size: 20px;
 }
 
-@media (min-width : 320px) and (max-width : 400px) {
+@media (min-width : 320px) and (max-width : 1024px) {
  .input{
     display: inline-grid;
     place-items: center;
@@ -134,7 +137,5 @@ padding: 20px;
     font-size: 0.8rem;
     padding: 2rem;
  }
- .game-btn:disabled:hover{
-    background-color:#E6EFE9;;
-}
+
 }
