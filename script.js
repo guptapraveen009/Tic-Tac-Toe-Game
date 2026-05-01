@@ -43,6 +43,20 @@ startbtn.addEventListener('click', (e) => {
 
 
 boxes.forEach((box) => {
+  box.addEventListener("touchstart", () => {
+        if (!box.disabled) {
+            box.style.backgroundColor = "#FFF8E8";
+        }
+    });
+
+    box.addEventListener("touchend", () => {
+         
+        if (!box.disabled) {
+            box.style.backgroundColor = "#E6EFE9";
+            
+           
+        }
+    });
     box.addEventListener("click", () => {
         if (turnO) {
             message.innerText = `${p2} It's Your Turn`;
@@ -54,7 +68,9 @@ boxes.forEach((box) => {
             turnO = true;
             message.innerText = `${p1} It's Your Turn`;
         }
+        
         box.disabled = true
+        box.style.backgroundColor = "#E6EFE9"
         winner();
 
     });

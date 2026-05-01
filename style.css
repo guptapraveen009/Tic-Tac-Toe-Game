@@ -41,13 +41,11 @@ margin: 20px;
     font-size: 3rem;
 }
 
-.game-btn:hover,
-.game-btn:focus {
+.game-btn:hover{
     background-color: #FFF8E8;
 }
 
-.game-btn:disabled:hover,
-.game-btn:disabled:focus {
+.game-btn:disabled:hover{
     background-color: #E6EFE9;
     outline: none;
 }
