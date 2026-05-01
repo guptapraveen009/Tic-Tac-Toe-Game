@@ -112,10 +112,12 @@ let winner = () => {
 
 //End 
 reset.addEventListener('click', () => {
+    
     let confirmation = confirm("Do You Want Reset The Game");
     for (let i = 0; i < boxes.length; i++) {
 
         if (confirmation) {
+        
             boxes[i].innerText = ""
             boxes[i].disabled = false
         }
@@ -123,5 +125,10 @@ reset.addEventListener('click', () => {
     let clear = document.querySelector(".winner")
     if (clear) {
         clear.remove()
+    }
+
+    let drawclear = document.querySelector(".Draw");
+    if(drawclear){
+        drawclear.remove()
     }
 })
