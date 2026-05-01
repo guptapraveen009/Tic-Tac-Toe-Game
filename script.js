@@ -24,8 +24,9 @@ let message = document.createElement("div");
 message.classList.add("meassge");
 document.body.appendChild(message)
 
+
 startbtn.addEventListener('click', (e) => {
-     e.preventDefault()
+    e.preventDefault()
     if (player1.value === "" || player2.value === "") {
         startbtn.disabled = true;
     }
@@ -42,26 +43,20 @@ startbtn.addEventListener('click', (e) => {
 
 
 boxes.forEach((box) => {
-
-
     box.addEventListener("click", () => {
-       
         if (turnO) {
             message.innerText = `${p2} It's Your Turn`;
             box.innerText = "O";
             turnO = false;
-
         }
         else {
             box.innerText = "X";
             turnO = true;
             message.innerText = `${p1} It's Your Turn`;
-
-        }
-
-        box.disabled = true
-
+         }
+          box.disabled = true
         winner();
+       
     });
 
 });
@@ -74,9 +69,8 @@ let Showwinner = (winner1) => {
     let winnername = winner1 === "O" ? p1 : p2;
     Winnertext.innerText = `Congratulations ${winnername} Won`;
     document.body.appendChild(Winnertext);
-
     boxes.forEach((box) => {
-        box.disabled = true;
+        box.disabled = true
     })
 };
 let draw = () => {
@@ -102,22 +96,22 @@ let winner = () => {
                 Showwinner(postion1);
                 return;
             }
-         }
+        }
     }
     let filled = [...boxes].every(box => box.innerText !== "")
     if (filled === true) {
-            draw();
+        draw();
     }
 };
 
 //End 
 reset.addEventListener('click', () => {
-    
+
     let confirmation = confirm("Do You Want Reset The Game");
     for (let i = 0; i < boxes.length; i++) {
 
         if (confirmation) {
-        
+
             boxes[i].innerText = ""
             boxes[i].disabled = false
         }
@@ -125,12 +119,12 @@ reset.addEventListener('click', () => {
     let clear = document.querySelector(".winner")
     if (clear) {
         clear.remove()
-         message.innerText = `${p1} It's Your Turn`;
+        message.innerText = `${p1} It's Your Turn`;
     }
 
     let drawclear = document.querySelector(".Draw");
-    if(drawclear){
+    if (drawclear) {
         drawclear.remove()
-         message.innerText = `${p1} It's Your Turn`;
+        message.innerText = `${p1} It's Your Turn`;
     }
 })

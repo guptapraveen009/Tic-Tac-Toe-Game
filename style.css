@@ -45,6 +45,9 @@ margin: 20px;
     background-color: #FFF8E8;
 }
 
+.game-btn:disabled:hover{
+    background-color:#E6EFE9;;
+}
 #reset{
     padding: 1rem;
     margin-top: 1.5rem;
